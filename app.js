@@ -3,8 +3,10 @@
     const Firstpage = document.getElementById('card');
     const Secondpage = document.getElementById('card2');
     const Inputemail = document.getElementById('InputEmail');
+    const submit2=document.getElementById('btn');
 
     submit.addEventListener('click', ValidateEmail);
+    
 
     Secondpage.style.visibility = 'hidden';
 
@@ -37,3 +39,11 @@
         Secondpage.style.visibility = 'hidden';
       }
     }
+    submit2.addEventListener('click', ReturnToFirstPge);
+    function  ReturnToFirstPge(e)  { 
+      e.preventDefault();  
+      Secondpage.style.visibility = 'hidden';
+      Firstpage.style.display = 'block';
+
+    }
+    

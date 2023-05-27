@@ -142,7 +142,7 @@ small{
 
 input.error {
     border: 1px solid var(--Tomato);
-    background-color: hsl(4,93%,94%);
+    background-color: rgb(253, 216, 213);
     
   }
   input .error::placeholder{
@@ -186,7 +186,6 @@ width:90%;
    border: 1px solid var(--Grey);
    cursor: pointer;
    transition: .1s ;
-   transform: scale(1.01);
 }
 
 #card2 .btn p{
@@ -204,14 +203,16 @@ font-weight:var(--font-weight2);
 @media(max-width:600px){
 body{
     background-color: var(--White);
+    height:auto;
+    justify-content: center;
 }
 #card{
-    max-width: 400px;
+    max-width: 420px;
     display: flex;
     flex-direction:column-reverse;
-      align-items: center;
+    align-items: center;
     justify-content: center;
-
+    height:920px;
 }
 .image1{
     display:none;
@@ -219,7 +220,6 @@ body{
 .image2{
    max-height: 380px;
    visibility:visible;
-}
 }
 .container{
 width:350px;
@@ -246,11 +246,13 @@ line-height: 30px;
    margin-bottom:19rem;
     width:100%;
 }
-#card2 .btn{
-  width:20rem; 
+ #card2 .btn{
+  width:20rem;
+}
+#submitbtn{
+    margin-top:50rem;
 }
 small{
      right:-13rem;
 }
-
 }
