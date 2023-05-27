@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;700&display=swap');
+
+:root{
+    /* color */
+
+   /* Primary */
+
+    --Tomato: hsl(4, 100%, 67%);
+
+   /* Neutral */
+
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+
+    /*Fonts*/
+--font-size: 16px;
+--font-family: 'Poppins', sans-serif;
+--font-family: 'Roboto', sans-serif;
+--font-weight1:400;
+--font-weight2:700;
+
+}
+*{
+font-family: var(--font-family);
+padding:0;
+margin:0;
+box-sizing: border-box;
+}
+body{
+    background-color: var(--Dark-Slate-Grey);
+    background-size: cover;
+    width: 100%;
+    height:100vh;
+    font-size:var(--font-size) ;
+}
+
+#card{
+    height: 500px;
+    width:800px;
+    background-color: var(--White);
+    border-radius: 1.3rem;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    top:50%;
+    left:50%;
+    padding: 10px;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.image2{
+    visibility:hidden;
+}
+.image1 img{
+    width: 24.5rem;
+    height: 30rem;
+}
+
+#card h1{
+    font-size: 40px;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight2);
+    padding-bottom: 20px;
+    color: var(--Charcoal-Grey);
+}
+
+.container{
+    padding:30px 0 60px 30px;
+    width: 26.5rem;
+    height:40rem;
+}
+.intro p{
+padding-bottom: 20px;
+}
+.first,.third,.second{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:20px;
+}
+.first p,.third p ,.second p{
+   padding-left: 15px; 
+   font-weight: var(--font-weight1);
+   font-size: var(--font-size);
+   font-family: var(--font-family);
+   width: 120%;;
+ }
+.email p{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight2);
+    padding-top: 15px;
+    padding-bottom:10px;
+    font-size: 13.5px;
+    color:var(--Charcoal-Grey);   
+}
+
+ input{
+    width:23rem;
+    height: 45px;
+    padding:0.5rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--Grey);
+}
+
+input::placeholder{
+  padding:15px;
+  color:var(--Charcoal-Grey);
+  font-weight:var(--font-weight1);
+  font-family:var(--font-family);
+}
+
+#submitbtn{
+    width:23rem;
+    height: 45px;
+    border-radius: 0.4rem;
+   margin-top:20px;
+   background-color: var(--Dark-Slate-Grey);
+   border: 1px solid var(--Grey);
+   cursor: pointer;
+   transition: .1s ;
+   transform: scale(1.01);
+   
+}
+
+#submitbtn p{
+    padding:10px;
+    color:var(--White);
+   text-align: center;   
+}
+
+small{
+    font-size: 12.5px;
+    font-weight: var(--font-weight2);
+    color:var(--Tomato);
+    text-transform: none;
+    position:relative;
+    top:-75px;
+     right:-16rem;
+}
+
+input.error {
+    border: 1px solid var(--Tomato);
+    background-color: hsl(4,93%,94%);
+    
+  }
+  input .error::placeholder{
+    color: var(--Tomato);
+  }
+/* second page */
+
+#card2{
+    height: 450px;
+    width:450px;
+    background-color: var(--White);
+    border-radius: 1.3rem;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    top:50%;
+    left:50%;
+    padding: 40px;
+    visibility:hidden;
+}
+#card2 h1{
+    font-size: 50px;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight2);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: var(--Charcoal-Grey);
+}
+ #card2 p{
+font-weight: var(--font-weight1);
+font-family: var(--font-family);
+font-size: var(--font-size);
+line-height: 25px;
+width:90%;
+}
+#card2 .btn{
+   width:22rem;
+    height: 50px;
+    border-radius: 0.4rem;
+   margin-top:30px;
+   background-color: var(--Dark-Slate-Grey);
+   border: 1px solid var(--Grey);
+   cursor: pointer;
+   transition: .1s ;
+   transform: scale(1.01);
+}
+
+#card2 .btn p{
+    padding:10px;
+    color:var(--White);
+   text-align: center;   
+}
+
+#card2 span{
+color:var(--Dark-Slate-Grey);
+font-size:var(--font-size);
+font-weight:var(--font-weight2);
+}
+
+@media(max-width:600px){
+body{
+    background-color: var(--White);
+}
+#card{
+    max-width: 400px;
+    display: flex;
+    flex-direction:column-reverse;
+      align-items: center;
+    justify-content: center;
+
+}
+.image1{
+    display:none;
+}
+.image2{
+   max-height: 380px;
+   visibility:visible;
+}
+}
+.container{
+width:350px;
+}
+input,#submitbtn {
+    width:20rem;
+}
+.intro p{
+line-height: 30px;
+}
+.first ,.second ,.third {
+   align-items: flex-start;
+}
+.first p,.second p,.third p{
+    line-height: 25px;
+}
+        /* second page */
+#card2{
+    width:400px;
+    height:700px;
+    padding:40px;
+}
+#card2 p{
+   margin-bottom:19rem;
+    width:100%;
+}
+#card2 .btn{
+  width:20rem; 
+}
+small{
+     right:-13rem;
+}
+
+}
