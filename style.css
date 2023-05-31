@@ -16,7 +16,7 @@
 
     /*Fonts*/
 --font-size: 16px;
---font-family: 'Poppins', sans-serif;
+--font-family1: 'Poppins', sans-serif;
 --font-family: 'Roboto', sans-serif;
 --font-weight1:400;
 --font-weight2:700;
@@ -74,19 +74,22 @@ body{
 .intro p{
 padding-bottom: 20px;
 }
-.first,.third,.second{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom:20px;
-}
-.first p,.third p ,.second p{
-   padding-left: 15px; 
-   font-weight: var(--font-weight1);
-   font-size: var(--font-size);
-   font-family: var(--font-family);
-   width: 120%;;
- }
+.list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .list li {
+    display: flex; 
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .list li img {
+    margin-right:20px;
+  }
+  
+  
 .email p{
     font-family: var(--font-family);
     font-weight: var(--font-weight2);
@@ -222,22 +225,32 @@ body{
    max-height: 380px;
    visibility:visible;
 }
+
 .container{
 width:350px;
 padding:1.2rem;
 }
+
 input,#submitbtn {
     width:20rem;
 }
 .intro p{
 line-height: 30px;
 }
-.first ,.second ,.third {
+
+ul.list {
+    display: flex;
+    flex-direction: column;
    align-items: flex-start;
-}
-.first p,.second p,.third p{
-    line-height: 25px;
-}
+  }
+
+  ul.list li {
+    margin-bottom: 20px;
+  }
+  ul.list li p{
+    line-height: 22px;
+  }
+  
         /* second page */
 #card2{
     width:400px;
